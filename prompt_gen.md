@@ -1,6 +1,7 @@
-part one resume: To continue this session, run codex resume 019ce99a-6f56-71a2-9ac0-ada4c9cd6f23
+part one: codex resume 019ce99a-6f56-71a2-9ac0-ada4c9cd6f23
+part two: codex resume 019ce99a-6f56-71a2-9ac0-ada4c9cd6f23
 
-please write 25 short challenges for C coding, each should require a specific output to stdout to make it quick and easy to evaluate success. assume the student can do basic things like write a function that uses variables and returns. escalate the difficulty of each challengee mildly. they can be standalone -- they don't need to build on every previous concept. this should be a rapid fire style exercise for the student, with the challenges needing no more than 100 lines at the most difficult. don't feel the need to cover the full range of C concepts -- there will be a second and third edition of this test elevating the complexity. focus this on the fundamentals used in basic to moderate C code. keep the challenge prompts clear and with the required output in the prompt. this should need nothing more than things reasonable to expect on a dev setup when it comes to includes. <stdio> <stdlib> etc. again -- self contained, rapid fire. write it out to a file called chal.c and then write a file called "prompt_geen.md" with this prompt in it for my future use.
+please write 25 short challenges for C coding, each should require a specific output to stdout to make it quick and easy to evaluate success. assume the student can do basic things like write a function that uses variables and returns. escalate the difficulty of each challengee mildly. they can be standalone -- they don't need to build on every previous concept. this should be a rapid fire style exercise for the student, with the challenges needing no more than 100 lines at the most difficult. don't feel the need to cover the full range of C concepts -- there will be a second and third edition of this test elevating the complexity. focus this on the fundamentals used in basic to moderate C code. keep the challenge prompts clear and with the required output in the prompt. this should need nothing more than things reasonable to expect on a dev setup when it comes to includes. <stdio> <stdlib> etc. again -- self contained, rapid fire. write it out to a file called chal.c and then write a file called "prompt_gen.md" with this prompt in it for my future use.
 
 ## Part 2 Continuation Style Guide For Future Generation
 
@@ -159,3 +160,31 @@ Style target:
 - slightly more code than Part 1
 - combined fundamentals first
 - more difficult reasoning saved for Part 3
+
+## Workbook Format Notes
+
+When generating the actual `.c` file for students:
+- Do not emit the challenge text with `puts` or `printf` as the primary prompt format.
+- Put challenge instructions in comments so the file reads like a workbook when opened in an editor.
+- Make the file immediately actionable: the student should see where to type code without needing to reorganize anything.
+- Prefer one stub function per challenge, such as `void challenge_01(void)`.
+- Put the prompt comments inside each function at the top, then leave a short TODO area below them so the student can glance upward while coding.
+- Keep the file compilable before the student starts.
+- Use a single `main` that prints a small header for each challenge, prints the expected output, then calls the stub so the student's actual output appears below it.
+- Label the two sections clearly, for example `Expected:` and `Actual:`.
+- Keep the student experience simple: open file, write code in stubs, compile, compare expected vs actual.
+- Avoid hiding the work behind macros, menus, argument parsing, or multi-file layouts.
+- If desired, include separators between challenges so repeated compile-and-run output is easy to scan.
+
+Workbook sketch:
+- file header comment explaining the workflow
+- includes
+- stub function for each challenge
+- prompt comment block at the top of each stub
+- empty or placeholder student code area below the prompt comment in each stub
+- `main` that iterates through all challenges and shows expected output followed by actual output
+
+Reason for this format:
+- It turns the challenge file into both the prompt sheet and the coding workspace.
+- It reduces startup friction for the student.
+- It makes stdout comparison immediate.
