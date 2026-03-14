@@ -20,8 +20,14 @@ void challenge_01(void) {
      Store the integer 4829 as a promo code, add its digits, and print the
      checksum.
   */
-
-  /* TODO: write your solution here */
+  int promo_code[] = {4, 8, 2, 9};
+  int sum = 0;
+  // int test_sum = 4 + 8 + 2 + 9;
+  for (int i = 0; i < 4; i++) {
+    sum = sum + promo_code[i];
+  }
+  // printf("%i \n %i", sum, test_sum);
+  printf("%i\n", sum);
 }
 
 void challenge_02(void) {
@@ -29,6 +35,11 @@ void challenge_02(void) {
      Convert 3671 seconds into hours, minutes, and seconds, then print the
      result as h:mm:ss.
   */
+  int seconds_total = 3671;
+  int hours = (seconds_total / 60) % 60;
+  int minutes = 0;
+  int seconds = 0;
+  printf("sanity check:%i\n%i:%i:%i\n", seconds_total, hours, minutes, seconds);
 
   /* TODO: write your solution here */
 }
@@ -394,7 +405,8 @@ int main(void) {
   print_separator(11);
   printf("Your:\n");
   challenge_11();
-  printf("Expected:\n1 2 Clap 4 Shout Clap 7 8 Clap Shout 11 Clap 13 14 Encore\n");
+  printf(
+      "Expected:\n1 2 Clap 4 Shout Clap 7 8 Clap Shout 11 Clap 13 14 Encore\n");
   printf("\n");
 
   print_separator(12);
