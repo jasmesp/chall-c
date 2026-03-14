@@ -5,7 +5,7 @@ How to use this file:
 1. Open this file and work inside the challenge functions.
 2. Read the commented prompt at the top of each function.
 3. Write your solution below that prompt.
-4. Compile and run this file.
+4. Compile and run this file with cc.
 5. Compare the "Expected" section to the "Actual" section.
 
 This file compiles before you start. The challenge functions are stubs so you

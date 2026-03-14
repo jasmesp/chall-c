@@ -1,7 +1,7 @@
 part one: codex resume 019ce99a-6f56-71a2-9ac0-ada4c9cd6f23
 part two: codex resume 019ce99a-6f56-71a2-9ac0-ada4c9cd6f23
 part three: codex resume 019ce99a-6f56-71a2-9ac0-ada4c9cd6f23
-
+part 4: codex resume 019ce99a-6f56-71a2-9ac0-ada4c9cd6f23
 
 
 please write 25 short challenges for C coding, each should require a specific output to stdout to make it quick and easy to evaluate success. assume the student can do basic things like write a function that uses variables and returns. escalate the difficulty of each challengee mildly. they can be standalone -- they don't need to build on every previous concept. this should be a rapid fire style exercise for the student, with the challenges needing no more than 100 lines at the most difficult. don't feel the need to cover the full range of C concepts -- there will be a second and third edition of this test elevating the complexity. focus this on the fundamentals used in basic to moderate C code. keep the challenge prompts clear and with the required output in the prompt. this should need nothing more than things reasonable to expect on a dev setup when it comes to includes. <stdio> <stdlib> etc. again -- self contained, rapid fire. write it out to a file called chal.c and then write a file called "prompt_gen.md" with this prompt in it for my future use.
@@ -173,6 +173,7 @@ When generating the actual `.c` file for students:
 - Prefer one stub function per challenge, such as `void challenge_01(void)`.
 - Put the prompt comments inside each function at the top, then leave a short TODO area below them so the student can glance upward while coding.
 - Leave 5 blank lines after the TODO comment before the closing brace so the student has visible working space even in minimal editors.
+- Those 5 lines must be real blank lines in the generated file, not just an instruction saying to leave space.
 - Keep the file compilable before the student starts.
 - Use a single `main` that prints a small header for each challenge, prints the expected output, then calls the stub so the student's actual output appears below it.
 - Label the two sections clearly, for example `Expected:` and `Actual:`.
@@ -188,6 +189,9 @@ Workbook sketch:
 - empty or placeholder student code area below the prompt comment in each stub
 - 5 blank working lines before each stub's closing brace
 - `main` that iterates through all challenges and shows expected output followed by actual output
+
+Verification reminder:
+- After generating the workbook file, verify at least one stub with line-numbered output and confirm the TODO line is followed by 5 actual blank lines before `}`.
 
 Reason for this format:
 - It turns the challenge file into both the prompt sheet and the coding workspace.
