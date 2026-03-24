@@ -11,9 +11,10 @@ How to use this file:
 This file compiles before you start. The challenge functions are stubs so you
 can fill them in one at a time without reorganizing anything.
 */
-
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 void challenge_01(void) {
   /* Challenge 1: Album code checksum
@@ -341,7 +342,13 @@ static void print_file_contents(const char *label, const char *path) {
   fclose(file);
 }
 
-int main(void) {
+int main(int argc, char **argv) {
+
+  if (argc == 2) {
+    printf("%s\n", argv[1]);
+  } else {
+    printf("fucked.");
+  };
   print_separator(1);
   printf("Your:\n");
   challenge_01();
