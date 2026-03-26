@@ -354,190 +354,212 @@ static void print_file_contents(const char *label, const char *path) {
 
 struct Input {};
 
-int main() {
-  print_separator(1);
-  printf("Your:\n");
-  challenge_01();
-  printf("Expected:\n23\n");
-  printf("\n");
+int main(int argc, char **argv) {
 
-  print_separator(2);
-  printf("Your:\n");
-  challenge_02();
-  printf("Expected:\n1:01:11\n");
-  printf("\n");
+  if (argc == 2) {
+    int temp_int_input = atoi(argv[1]);
 
-  print_separator(3);
-  printf("Your:\n");
-  challenge_03();
-  printf("Expected:\n11.33\n");
-  printf("\n");
-  print_separator(4);
-  printf("Your:\n");
-  challenge_04();
-  printf("Expected:\n3\n");
-  printf("\n");
+    switch (temp_int_input) {
+    case 1:
+      challenge_01();
+    case 2:
+      challenge_02();
+    case 3:
+      challenge_03();
+    case 4:
+      challenge_04();
 
-  print_separator(5);
-  printf("Your:\n");
-  challenge_05();
-  printf("Expected:\nYES\n");
-  printf("\n");
-
-  print_separator(6);
-  printf("Your:\n");
-  challenge_07();
-  printf("Expected:\nA\n");
-  printf("\n");
-
-  print_separator(7);
-  printf("Your:\n");
-  challenge_08();
-  printf("Expected:\ndigit\n");
-  printf("\n");
-
-  print_separator(8);
-  printf("Your:\n");
-  challenge_09();
-  printf("Expected:\n100\n");
-  printf("\n");
-
-  print_separator(9);
-  printf("Your:\n");
-  challenge_10();
-  printf("Expected:\n17\n");
-  printf("\n");
-
-  print_separator(10);
-  printf("Your:\n");
-  challenge_12();
-  printf("Expected:\n98\n");
-  printf("\n");
-
-  print_separator(11);
-  printf("Your:\n");
-  challenge_11();
-  printf(
-      "Expected:\n1 2 Clap 4 Shout Clap 7 8 Clap Shout 11 Clap 13 14 Encore\n");
-  printf("\n");
-
-  print_separator(12);
-  printf("Your:\n");
-  challenge_16();
-  printf("Expected:\n32\n");
-  printf("\n");
-
-  print_separator(13);
-  printf("Your:\n");
-  challenge_13();
-  printf("Expected:\n3\n");
-  printf("\n");
-
-  print_separator(14);
-  printf("Your:\n");
-  challenge_18();
-  printf("Expected:\n5 1 2 3 4\n");
-  printf("\n");
-
-  print_separator(15);
-  printf("Your:\n");
-  challenge_20();
-  printf("Expected:\n4\n");
-  printf("\n");
-
-  print_separator(16);
-  printf("Your:\n");
-  challenge_14();
-  printf("Expected:\nYES\n");
-  printf("\n");
-
-  print_separator(17);
-  printf("Your:\n");
-  challenge_15();
-  printf("Expected:\n4\n");
-  printf("\n");
-
-  print_separator(18);
-  printf("Your:\n");
-  challenge_19();
-  printf("Expected:\na\n");
-  printf("\n");
-
-  print_separator(19);
-  printf("Your:\n");
-  challenge_28();
-  printf("Expected:\n-2038\n");
-  printf("\n");
-
-  print_separator(20);
-  printf("Your:\n");
-  challenge_22();
-  printf("Expected:\n11\n");
-  printf("\n");
-
-  print_separator(21);
-  printf("Your:\n");
-  challenge_23();
-  printf("Expected:\n3 8\n");
-  printf("\n");
-
-  print_separator(22);
-  printf("Your:\n");
-  challenge_24();
-  printf("Expected:\n42\n");
-  printf("\n");
-
-  print_separator(23);
-  printf("Your:\n");
-  challenge_29();
-  printf("Expected:\n8080\n");
-  printf("\n");
-
-  print_separator(24);
-  printf("Your:\n");
-  challenge_17();
-  printf("Expected:\n8\n");
-  printf("\n");
-
-  print_separator(25);
-  printf("Your:\n");
-  challenge_27();
-  printf("Expected:\n1 2 3 5\n");
-  printf("\n");
-
-  print_separator(26);
-  printf("Your:\n");
-  challenge_21();
-  printf("Expected:\nItZy!\n");
-  printf("\n");
-
-  print_separator(27);
-  printf("Your:\n");
-  challenge_06();
-  printf("Expected:\n17.32\n");
-  printf("\n");
-
-  print_separator(28);
-  printf("Your:\n");
-  challenge_26();
-  printf("Expected:\n45\n");
-  printf("\n");
-
-  print_separator(29);
-  printf("Your:\n");
-  remove("setlist-export.txt");
-  challenge_25();
-  print_file_contents("File `setlist-export.txt`:", "setlist-export.txt");
-  printf("Expected:\n30\n");
-  printf("\n");
-
-  print_separator(30);
-  printf("Your:\n");
-  remove("fan-report.txt");
-  challenge_30();
-  print_file_contents("File `fan-report.txt`:", "fan-report.txt");
-  printf("Expected:\n2:1 5:2 7:3\n");
-  printf("\n");
-
+    default:
+      return 0;
+    }
+  } else {
+    printf("fucked.");
+  };
+  // print_separator(1);
+  // printf("Your:\n");
+  // challenge_01();
+  // printf("Expected:\n23\n");
+  // printf("\n");
+  //
+  // print_separator(2);
+  // printf("Your:\n");
+  // challenge_02();
+  // printf("Expected:\n1:01:11\n");
+  // printf("\n");
+  //
+  // print_separator(3);
+  // printf("Your:\n");
+  // challenge_03();
+  // printf("Expected:\n11.33\n");
+  // printf("\n");
+  //
+  // print_separator(4);
+  // printf("Your:\n");
+  // challenge_04();
+  // printf("Expected:\n3\n");
+  // printf("\n");
+  //
+  // print_separator(5);
+  // printf("Your:\n");
+  // challenge_05();
+  // printf("Expected:\nYES\n");
+  // printf("\n");
+  //
+  // print_separator(6);
+  // printf("Your:\n");
+  // challenge_07();
+  // printf("Expected:\nA\n");
+  // printf("\n");
+  //
+  // print_separator(7);
+  // printf("Your:\n");
+  // challenge_08();
+  // printf("Expected:\ndigit\n");
+  // printf("\n");
+  //
+  // print_separator(8);
+  // printf("Your:\n");
+  // challenge_09();
+  // printf("Expected:\n100\n");
+  // printf("\n");
+  //
+  // print_separator(9);
+  // printf("Your:\n");
+  // challenge_10();
+  // printf("Expected:\n17\n");
+  // printf("\n");
+  //
+  // print_separator(10);
+  // printf("Your:\n");
+  // challenge_12();
+  // printf("Expected:\n98\n");
+  // printf("\n");
+  //
+  // print_separator(11);
+  // printf("Your:\n");
+  // challenge_11();
+  // printf(
+  //     "Expected:\n1 2 Clap 4 Shout Clap 7 8 Clap Shout 11 Clap 13 14
+  //     Encore\n");
+  // printf("\n");
+  //
+  // print_separator(12);
+  // printf("Your:\n");
+  // challenge_16();
+  // printf("Expected:\n32\n");
+  // printf("\n");
+  //
+  // print_separator(13);
+  // printf("Your:\n");
+  // challenge_13();
+  // printf("Expected:\n3\n");
+  // printf("\n");
+  //
+  // print_separator(14);
+  // printf("Your:\n");
+  // challenge_18();
+  // printf("Expected:\n5 1 2 3 4\n");
+  // printf("\n");
+  //
+  // print_separator(15);
+  // printf("Your:\n");
+  // challenge_20();
+  // printf("Expected:\n4\n");
+  // printf("\n");
+  //
+  // print_separator(16);
+  // printf("Your:\n");
+  // challenge_14();
+  // printf("Expected:\nYES\n");
+  // printf("\n");
+  //
+  // print_separator(17);
+  // printf("Your:\n");
+  // challenge_15();
+  // printf("Expected:\n4\n");
+  // printf("\n");
+  //
+  // print_separator(18);
+  // printf("Your:\n");
+  // challenge_19();
+  // printf("Expected:\na\n");
+  // printf("\n");
+  //
+  // print_separator(19);
+  // printf("Your:\n");
+  // challenge_28();
+  // printf("Expected:\n-2038\n");
+  // printf("\n");
+  //
+  // print_separator(20);
+  // printf("Your:\n");
+  // challenge_22();
+  // printf("Expected:\n11\n");
+  // printf("\n");
+  //
+  // print_separator(21);
+  // printf("Your:\n");
+  // challenge_23();
+  // printf("Expected:\n3 8\n");
+  // printf("\n");
+  //
+  // print_separator(22);
+  // printf("Your:\n");
+  // challenge_24();
+  // printf("Expected:\n42\n");
+  // printf("\n");
+  //
+  // print_separator(23);
+  // printf("Your:\n");
+  // challenge_29();
+  // printf("Expected:\n8080\n");
+  // printf("\n");
+  //
+  // print_separator(24);
+  // printf("Your:\n");
+  // challenge_17();
+  // printf("Expected:\n8\n");
+  // printf("\n");
+  //
+  // print_separator(25);
+  // printf("Your:\n");
+  // challenge_27();
+  // printf("Expected:\n1 2 3 5\n");
+  // printf("\n");
+  //
+  // print_separator(26);
+  // printf("Your:\n");
+  // challenge_21();
+  // printf("Expected:\nItZy!\n");
+  // printf("\n");
+  //
+  // print_separator(27);
+  // printf("Your:\n");
+  // challenge_06();
+  // printf("Expected:\n17.32\n");
+  // printf("\n");
+  //
+  // print_separator(28);
+  // printf("Your:\n");
+  // challenge_26();
+  // printf("Expected:\n45\n");
+  // printf("\n");
+  //
+  // print_separator(29);
+  // printf("Your:\n");
+  // remove("setlist-export.txt");
+  // challenge_25();
+  // print_file_contents("File `setlist-export.txt`:", "setlist-export.txt");
+  // printf("Expected:\n30\n");
+  // printf("\n");
+  //
+  // print_separator(30);
+  // printf("Your:\n");
+  // remove("fan-report.txt");
+  // challenge_30();
+  // print_file_contents("File `fan-report.txt`:", "fan-report.txt");
+  // printf("Expected:\n2:1 5:2 7:3\n");
+  // printf("\n");
+  //
   return 0;
 }
