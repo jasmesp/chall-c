@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -std=c11
-TARGET = trimmed
-SRC = trimmed.c
+TARGET = trimmed2
+SRC = trimmed2.c
 
 .PHONY: all run clean
 
