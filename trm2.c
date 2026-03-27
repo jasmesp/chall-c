@@ -354,27 +354,39 @@ static void print_file_contents(const char *label, const char *path) {
 
 struct Input {};
 
-int main(int argc, char **argv) {
-
-  if (argc == 2) {
-    int temp_int_input = atoi(argv[1]);
-
-    switch (temp_int_input) {
-    case 1:
-      challenge_01();
-    case 2:
-      challenge_02();
-    case 3:
-      challenge_03();
-    case 4:
-      challenge_04();
-
-    default:
-      return 0;
-    }
+void user_input(int selection) {
+  if (selection == 1) {
+    challenge_01();
   } else {
+    printf("failed.\n");
+  }
+}
+
+int main(int argc, char **argv) {
+  if (argc == 2) {
+    int selection = atoi(argv[1]);
+    user_input(selection);
+  } else
     printf("fucked.");
-  };
+  // if (argc == 2) {
+  //   int temp_int_input = atoi(argv[1]);
+  //
+  //   switch (temp_int_input) {
+  //   case 1:
+  //     challenge_01();
+  //   case 2:
+  //     challenge_02();
+  //   case 3:
+  //     challenge_03();
+  //   case 4:
+  //     challenge_04();
+  //
+  //   default:
+  //     return 0;
+  //   }
+  // } else {
+  //   printf("fucked.");
+  // };
   // print_separator(1);
   // printf("Your:\n");
   // challenge_01();
