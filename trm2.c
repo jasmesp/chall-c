@@ -356,7 +356,7 @@ struct Input {};
 
 void user_input(int selection) {
   if (selection == 1) {
-    challenge_01();
+    challenge_03();
   } else {
     printf("failed.\n");
   }
