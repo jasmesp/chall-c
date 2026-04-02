@@ -407,8 +407,8 @@ challenge challenges[] = {
 int main(int argc, char **argv) {
   if (argc == 2) {
     int selection = atoi(argv[1]);
-    user_input(selection);
-  } else
+    challenge_[selection]() 
+} else
     printf("fucked.");
   // if (argc == 2) {
   //   int temp_int_input = atoi(argv[1]);
