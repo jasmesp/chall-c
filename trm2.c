@@ -16,7 +16,41 @@ can fill them in one at a time without reorganizing anything.
 #include <stdlib.h>
 #include <string.h>
 
-int challenge_01() {
+typedef enum ChallengeFunction {
+  CHALLENGE_00,
+  CHALLENGE_01,
+  CHALLENGE_02,
+  CHALLENGE_03,
+  CHALLENGE_04,
+  CHALLENGE_05,
+  CHALLENGE_06,
+  CHALLENGE_07,
+  CHALLENGE_08,
+  CHALLENGE_09,
+  CHALLENGE_10,
+  CHALLENGE_11,
+  CHALLENGE_12,
+  CHALLENGE_13,
+  CHALLENGE_14,
+  CHALLENGE_15,
+  CHALLENGE_16,
+  CHALLENGE_17,
+  CHALLENGE_18,
+  CHALLENGE_19,
+  CHALLENGE_20,
+  CHALLENGE_21,
+  CHALLENGE_22,
+  CHALLENGE_23,
+  CHALLENGE_24,
+  CHALLENGE_25,
+  CHALLENGE_26,
+  CHALLENGE_27,
+  CHALLENGE_28,
+  CHALLENGE_29,
+  CHALLENGE_30,
+} ChallengeFunction;
+
+void challenge_01() {
   /* Challenge 1: Album code checksum
      Store the integer 4829 as a promo code, add its digits, and print the
      checksum.
@@ -31,10 +65,9 @@ int challenge_01() {
   }
   // printf("%i \n %i", sum, test_sum);
   // printf("%i\n", sum);
-  return 0;
 }
 
-int challenge_02() {
+void challenge_02() {
   /* Challenge 2: Comeback countdown
      Convert 3671 seconds into hours, minutes, and seconds, then print the
      result as h:mm:ss.
@@ -46,7 +79,6 @@ int challenge_02() {
   printf("sanity check:%i\n%i:%i:%i\n", seconds_total, hours, minutes, seconds);
 
   /* TODO: write your solution here */
-  return 0;
 }
 
 void challenge_03(void) {
@@ -356,12 +388,18 @@ struct Input {};
 
 void user_input(int selection) {
   if (selection == 1) {
-    challenge_03();
+    challenge_01();
   } else {
     printf("failed.\n");
   }
 }
+typedef void (*challenge)(void);
+challenge challenges[] = {
+    NULL,         challenge_01, challenge_02, challenge_03,
+    challenge_04, challenge_05, challenge_06, challenge_07,
+    challenge_08, challenge_09, challenge_10, challenge_11,
 
+};
 int main(int argc, char **argv) {
   if (argc == 2) {
     int selection = atoi(argv[1]);
