@@ -386,30 +386,39 @@ static void print_file_contents(const char *label, const char *path) {
 
 struct Input {};
 
-void user_input(int selection) {
-  if (selection == 1) {
-    challenge_01();
-  } else {
-    printf("failed.\n");
-  }
-}
-typedef void (*challenge)(void);
+// void user_input(int selection) {
+//   if (selection == 1) {
+//     challenges_01();
+//   } else {
+//     printf("failed.\n");
+//   }
+// }
+//
+typedef void (*challenge)();
 challenge challenges[] = {
-    NULL,         challenge_01, challenge_02, challenge_03,
-    challenge_04, challenge_05, challenge_06, challenge_07,
-    challenge_08, challenge_09, challenge_10, challenge_11,
-    challenge_12, challenge_13, challenge_14, challenge_15,
-    challenge_16, challenge_17, challenge_18, challenge_19,
-    challenge_20, challenge_21, challenge_22, challenge_23,
-    challenge_24, challenge_25, challenge_26, challenge_27,
-    challenge_28, challenge_29, challenge_30,
+    NULL,         challenge_01, challenge_02, challenge_03, challenge_04,
+    challenge_05, challenge_06, challenge_07, challenge_08, challenge_09,
+    challenge_10, challenge_11, challenge_12, challenge_13, challenge_14,
+    challenge_15, challenge_16, challenge_17, challenge_18, challenge_19,
+    challenge_20, challenge_21, challenge_22, challenge_23, challenge_24,
+    challenge_25, challenge_26, challenge_27, challenge_28, challenge_29,
+    challenge_30,
 };
+
+void output_all() { printf("placeholder for outputting all\n"); }
+
 int main(int argc, char **argv) {
   if (argc == 2) {
     int selection = atoi(argv[1]);
-    challenge_[selection]() 
-} else
-    printf("fucked.");
+    if (selection > 0 &&
+        (selection <= sizeof(challenges) / sizeof(challenges[0]) - 1) &&
+        selection != NULL)
+      challenges[selection]();
+  } else if (atoi(argv[1]) == 0) {
+    output_all();
+  } else {
+    printf("fucked. %d not valid", atoi(argv[1]));
+  }
   // if (argc == 2) {
   //   int temp_int_input = atoi(argv[1]);
   //
