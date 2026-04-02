@@ -398,7 +398,11 @@ challenge challenges[] = {
     NULL,         challenge_01, challenge_02, challenge_03,
     challenge_04, challenge_05, challenge_06, challenge_07,
     challenge_08, challenge_09, challenge_10, challenge_11,
-
+    challenge_12, challenge_13, challenge_14, challenge_15,
+    challenge_16, challenge_17, challenge_18, challenge_19,
+    challenge_20, challenge_21, challenge_22, challenge_23,
+    challenge_24, challenge_25, challenge_26, challenge_27,
+    challenge_28, challenge_29, challenge_30,
 };
 int main(int argc, char **argv) {
   if (argc == 2) {
