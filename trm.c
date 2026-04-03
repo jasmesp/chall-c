@@ -408,17 +408,27 @@ challenge challenges[] = {
 void output_all() { printf("placeholder for outputting all\n"); }
 
 int main(int argc, char **argv) {
+  int selection;
+  if (argc > 2) {
+    printf("Invalid -- too many arguments.\n");
+    return 1;
+  }
   if (argc == 2) {
     int selection = atoi(argv[1]);
     if (selection > 0 &&
-        (selection <= sizeof(challenges) / sizeof(challenges[0]) - 1) &&
-        selection != NULL)
+        (selection <= sizeof(challenges) / sizeof(challenges[0]) - 1))
       challenges[selection]();
-  } else if (atoi(argv[1]) == 0) {
-    output_all();
   } else {
-    printf("fucked. %d not valid", atoi(argv[1]));
+    printf("%s requires an int argument to specify which challenge "
+           "will print, or 0 to print out all.\n",
+           (argv[0]));
+    return 0;
   }
+  return 0;
+}
+
+void placeholder() {
+  // OLD MAIN FUNCTION:
   // if (argc == 2) {
   //   int temp_int_input = atoi(argv[1]);
   //
@@ -624,5 +634,4 @@ int main(int argc, char **argv) {
   // printf("Expected:\n2:1 5:2 7:3\n");
   // printf("\n");
   //
-  return 0;
 }
